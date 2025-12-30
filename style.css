@@ -1,0 +1,110 @@
+/* --- CSS (ESTILO) --- */
+:root {
+    --bg-color: #f3f4f6;       /* Cor de fundo da página */
+    --text-color: #1f2937;     /* Cor do texto principal */
+    --btn-bg: #ffffff;         /* Fundo do botão */
+    --btn-text: #111827;       /* Cor do texto do botão */
+    --btn-hover: #e5e7eb;      /* Cor do botão ao passar o mouse */
+    --accent-color: #2563eb;   /* Cor de destaque (opcional) */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container principal (limita a largura para parecer um celular) */
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 1. Logo Circular */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Isso faz a imagem ficar redonda */
+    object-fit: cover;  /* Garante que a imagem não distorça */
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* 2. Ícone do Instagram */
+.social-icon {
+    font-size: 28px;
+    color: #C13584; /* Cor oficial do gradiente do Instagram simplificada */
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* 3. Título e Descrição */
+h1 {
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0 0 30px 0;
+}
+
+/* 4. Botões (Links) */
+.links-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+.link-btn {
+    display: block;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 50px; /* Bordas arredondadas */
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.link-btn:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px); /* Efeito de subir levemente */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    line-height: 1.5; /* Espaçamento entre as linhas do rodapé */
+}
